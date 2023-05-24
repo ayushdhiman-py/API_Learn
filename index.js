@@ -15,12 +15,13 @@ app.get("/", (req, res) => {
 // We Use Middleware in which we first tell URL path then
 // provide the routes which is inside the file
 app.use("/api/products", products_routes);
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 5000;
 
 const start = async () => {
   try {
-    await connectDB("mongodb+srv://ayushdhiman1802:apiproject@cluster0.kbpnyld.mongodb.net/?retryWrites=true&w=majority");
+    await connectDB(
+      "mongodb+srv://ayushdhiman1802:apiproject@cluster0.kbpnyld.mongodb.net/?retryWrites=true&w=majority"
+    );
     app.listen(PORT, () => {
       console.log("Backend is working");
     });
