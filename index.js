@@ -18,7 +18,7 @@ app.use("/api/products", products_routes);
 
 const start = async () => {
   try {
-    await connectDB();
+    await connectDB("mongodb+srv://ayushdhiman1802:apiproject@cluster0.kbpnyld.mongodb.net/?retryWrites=true&w=majority");
     app.listen("5000", () => {
       console.log("Backend is working");
     });
