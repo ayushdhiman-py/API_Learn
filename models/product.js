@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema({
   name: { type: String, required: true },
   price: { type: Number, required: [true, "price must be provided"] },
-  featured: { type: Boolean, default: true },
+  featured: { type: Boolean, default: false },
   rating: { type: Number, deafult: 5 },
   createdAt: { type: Date, default: Date.now() },
   // gini chuni comapnies hi ho so we use enum
