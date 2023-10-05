@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const products_routes = require("./routes/products");
 const connectDB = require("./db/connect");
-
 // controllers and routes are the same thing that is done below
 // ki path ky hai or kr ky rahe hai
 // routes tells kis path m jana hai
